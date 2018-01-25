@@ -1,3 +1,4 @@
+#!/bin/python3
 import poplib
 import smtplib
 from email.parser import Parser

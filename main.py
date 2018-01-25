@@ -1,4 +1,4 @@
-
+#!/bin/python3
 from ZFmail import ZFmail
 import re
 from email.header import decode_header

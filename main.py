@@ -29,7 +29,7 @@ def read_email(msg, mail_title=''):
             if header == 'Subject':
                 value = decode_str(value)
                 if value != mail_title:
-                    return 0;
+                    return 0
             elif header == 'Date':
                 value = decode_str(value)
                 current_time = datetime.now().strftime('%a, %d %b %Y')
@@ -46,7 +46,7 @@ def read_email(msg, mail_title=''):
                     charset = guess_charset(part)
                     if charset:
                         # 解析附件内容
-                        content = content.decode(charset)
+                        content = content.decode(charset, 'ignore')
                         return checkBlackWords(content)
 
 
